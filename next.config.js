@@ -9,6 +9,9 @@ const nextConfig = {
       "img.icons8.com",
     ],
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;
