@@ -16,10 +16,12 @@ export default function Home() {
             <span className="bg-violet-200 px-2 rounded-xl">with Parify</span>
           </h3>
           <h5 className="text-zinc-400">
-            {`Parify's 3D printing service is now avaible and ready `} <br /> to
-            revolutionize the way you think about production and manufacturing
+            Parify&apos;s 3D printing service is now avaible and ready <br />
+            to revolutionize the way you think about production and
+            manufacturing
           </h5>
         </div>
+
         <Image
           src="https://img.freepik.com/free-vector/flat-abstract-wireframe-background_23-2149014845.jpg?size=626&ext=jpg"
           width={1200}
