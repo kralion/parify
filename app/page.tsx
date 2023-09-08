@@ -16,7 +16,7 @@ export default function Home() {
             <span className="bg-violet-200 px-2 rounded-xl">with Parify</span>
           </h3>
           <h5 className="text-zinc-400">
-            Parify's 3D printing service is now avaible and ready <br /> to
+            {`Parify's 3D printing service is now avaible and ready `} <br /> to
             revolutionize the way you think about production and manufacturing
           </h5>
         </div>
