@@ -8,12 +8,18 @@ import {
 import { CircleDashed } from "lucide-react";
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { M_PLUS_1_Code } from "next/font/google";
 
 type PlanCardProps = {
   cardTitle: string;
   cardPlanPrice: string;
   cardPlanExchange: string;
 };
+
+const m1PlusCode = M_PLUS_1_Code({
+  subsets: ["latin-ext", "vietnamese"],
+  weight: ["400"],
+});
 
 export default function PlanCard({
   cardTitle,
@@ -22,7 +28,7 @@ export default function PlanCard({
 }: PlanCardProps) {
   return (
     <Card className="hover:bg-indigo-200 rounded-xl hover:shadow-md bg-zinc-100 border-none group cursor-pointer duration-200 space-y-7">
-      <CardHeader>
+      <CardHeader className="space-y-3">
         <CardTitle className="flex gap-1 text-md font-normal items-center">
           <CircleDashed
             className="group-hover:bg-black rounded-full"
@@ -30,7 +36,9 @@ export default function PlanCard({
           />
           {cardTitle}
         </CardTitle>
-        <CardDescription className="flex items-baseline font-navaMono">
+        <CardDescription
+          className={`flex items-baseline ${m1PlusCode.className}`}
+        >
           <span className="text-4xl text-black font-bold">{cardPlanPrice}</span>{" "}
           /{cardPlanExchange}
         </CardDescription>
@@ -38,7 +46,7 @@ export default function PlanCard({
       <CardContent>
         <Button
           variant="outline"
-          className=" w-full rounded-full uppercase px-5 border-none"
+          className=" w-full rounded-full uppercase px-5 border-none font-navaMono"
         >
           Print parts
         </Button>

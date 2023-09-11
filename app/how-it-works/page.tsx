@@ -16,7 +16,9 @@ export default function Page() {
       >
         <div className="flex justify-between items-center">
           <div className="space-y-7 my-7">
-            <h5 className="uppercase">Find out exactly what you'll pay for</h5>
+            <h5 className="uppercase text-2xl font-navaMono">
+              Find out exactly what you'll pay for
+            </h5>
             <h3 className="text-6xl">
               No surprises, just honest <br /> and straightforward quotes
             </h3>
@@ -26,15 +28,7 @@ export default function Page() {
           </Button>
         </div>
         <div className="grid  lg:grid-flow-row gap-2 lg:grid-cols-5">
-          <div className="col-span-2 hidden lg:inline-flex">
-            <Image
-              className="object-fill"
-              src={Printer3D}
-              width={200}
-              height={200}
-              alt="printer"
-            />
-          </div>
+          <div className="col-span-2 hidden lg:inline-flex"></div>
           <PlanCard
             cardTitle="3D printing - Metal"
             cardPlanPrice="$250"
