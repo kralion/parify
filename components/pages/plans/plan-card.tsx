@@ -21,7 +21,7 @@ export default function PlanCard({
   cardPlanExchange,
 }: PlanCardProps) {
   return (
-    <Card className="hover:bg-indigo-200 w-64 rounded-lg hover:shadow-md bg-zinc-100 border-none group cursor-pointer duration-200 space-y-7">
+    <Card className="hover:bg-indigo-200 rounded-xl hover:shadow-md bg-zinc-100 border-none group cursor-pointer duration-200 space-y-7">
       <CardHeader>
         <CardTitle className="flex gap-1 text-md font-normal items-center">
           <CircleDashed
@@ -38,7 +38,7 @@ export default function PlanCard({
       <CardContent>
         <Button
           variant="outline"
-          className=" w-full rounded-full uppercase px-5"
+          className=" w-full rounded-full uppercase px-5 border-none"
         >
           Print parts
         </Button>

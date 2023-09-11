@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={robotoCondensed.className}>
-        <div className="space-y-10">
+        <div className="">
           <NavBar />
           {children}
         </div>
