@@ -5,7 +5,13 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="space-y-40">
-      <div className="flex justify-center items-center mx-7 ">
+      <div
+        className="flex justify-center items-center pl-7"
+        style={{
+          backgroundImage:
+            "url('https://img.freepik.com/free-photo/white-concrete-wall_53876-92803.jpg?size=626&ext=jpg')",
+        }}
+      >
         <div className="space-y-7">
           <h3 className=" text-6xl">
             Discover the joy of <br />

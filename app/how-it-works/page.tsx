@@ -27,7 +27,7 @@ export default function Page() {
             Contact Us
           </Button>
         </div>
-        <div className="grid  lg:grid-flow-row gap-2 lg:grid-cols-5">
+        <div className="grid lg:grid-flow-row gap-3.5 lg:grid-cols-5">
           <div className="col-span-2 hidden lg:inline-flex"></div>
           <PlanCard
             cardTitle="3D printing - Metal"
