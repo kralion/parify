@@ -16,7 +16,7 @@ export default function Page() {
       >
         <div className="flex justify-between items-center">
           <div className="space-y-7 my-7">
-            <h5 className="uppercase text-2xl font-navaMono">
+            <h5 className="uppercase tracking-tight text-2xl font-navaMono">
               Find out exactly what you'll pay for
             </h5>
             <h3 className="text-6xl">
@@ -49,7 +49,7 @@ export default function Page() {
       <footer className="grid grid-flow-row grid-cols-5 bg-zinc-300">
         <div className=" border-2 col-span-2  p-5 flex justify-between items-start bg-white rounded-lg ">
           <h3>CHARACTERISTICS</h3>
-          <div className="space-y-3.5 pr-10 px-5 flex flex-col text-zinc-400">
+          <div className="pr-10 px-5 gap-3 grid grid-rows-5 text-zinc-400">
             <span>Technology :</span>
             <span>Post Processing :</span>
             <span>Quality :</span>
@@ -57,21 +57,21 @@ export default function Page() {
             <span>Maximum sizes :</span>
           </div>
         </div>
-        <div className=" border-2 flex p-5 flex-col gap-3.5 bg-white rounded-lg ">
+        <div className=" border-2 grid grid-rows-5 gap-3 p-5   bg-white rounded-lg ">
           <span>L-PBF</span>
           <span>Medi blasting, CNC machining</span>
           <span>Industrial Grade</span>
           <span>From 12 business day</span>
           <span>Up to 500 x 500 x 500mm</span>
         </div>
-        <div className=" border-2 flex p-5 flex-col gap-3.5 bg-white rounded-lg ">
+        <div className=" border-2  p-5 grid grid-rows-5 gap-3 bg-white rounded-lg ">
           <span>SLS, MLF, FDM </span>
           <span>Dyeing, smothing, painting</span>
           <span>Industrial Grade</span>
           <span>From 6 business day</span>
           <span>Up to 700 x 380 x 580mm</span>
         </div>
-        <div className=" border-2 flex p-5 flex-col gap-3.5 bg-white rounded-lg ">
+        <div className=" border-2 p-5 grid grid-rows-5 gap-3 bg-white rounded-lg ">
           <span>CNC machining</span>
           <span></span>
           <span>Industrial Grade</span>
