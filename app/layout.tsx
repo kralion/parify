@@ -33,6 +33,9 @@ export default function RootLayout({
           <NavBar />
           {children}
         </div>
+        <footer className="bg-gray-900 p-4 text-center text-white">
+          <p>© 2024 Brayan Joan. All rights reserved.</p>
+        </footer>
       </body>
     </html>
   );

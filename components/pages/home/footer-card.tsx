@@ -18,14 +18,17 @@ export default function FooterCard({
   cardImageSrc,
 }: FooterCardProps) {
   return (
-    <Card className="hover:bg-zinc-100 cursor-pointer duration-200">
+    <Card className="hover:bg-zinc-100 group cursor-pointer duration-200">
       <CardHeader>
         <div className="flex items-center gap-2">
           <Image src={cardImageSrc} width={50} height={50} alt="cardImageSrc" />
           <div className="">
             <CardTitle className="flex gap-1">
               {cardTitle}
-              <ChevronRight size={20} />
+              <ChevronRight
+                className="group-hover:ml-3 duration-200 group-hover:opacity-100 opacity-0"
+                size={20}
+              />
             </CardTitle>
             <CardDescription>{cardDescription}</CardDescription>
           </div>

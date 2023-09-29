@@ -7,6 +7,7 @@ const nextConfig = {
       "i.imgur.com",
       "cdn.pixabay.com",
       "img.icons8.com",
+      "icons8.com",
     ],
   },
 };
