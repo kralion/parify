@@ -1,4 +1,3 @@
-import NavBar from "@/components/pages/navbar";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Inter, Roboto_Condensed } from "next/font/google";

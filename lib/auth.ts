@@ -9,10 +9,10 @@ export const authOptions: NextAuthOptions = {
   pages: {
     signIn: "/auth/signin",
   },
-  adapter: SupabaseAdapter({
-    url: process.env.NEXT_PUBLIC_SUPABASE_URL ?? "",
-    secret: process.env.SUPABASE_SERVICE_ROLE_KEY ?? "",
-  }),
+  // adapter: SupabaseAdapter({
+  //   url: process.env.NEXT_PUBLIC_SUPABASE_URL ?? "",
+  //   secret: process.env.SUPABASE_SERVICE_ROLE_KEY ?? "",
+  // }),
   providers: [
     CredentialsProvider({
       name: "Credentials",

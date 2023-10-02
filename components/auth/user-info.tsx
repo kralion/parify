@@ -1,12 +1,13 @@
 "use client";
 import { useSession } from "next-auth/react";
 
-export default function UserInfo() {
+export const UserInfo = () => {
   const { data: session } = useSession();
+
   return (
-    <div>
-      <h1>Client Session</h1>
-      <pre>{JSON.stringify(session)}</pre>
-    </div>
+    <>
+      <h1>Hello</h1>
+      <pre>{JSON.stringify(session?.user?.name)}</pre>
+    </>
   );
-}
+};

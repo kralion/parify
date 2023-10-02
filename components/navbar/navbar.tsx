@@ -1,11 +1,12 @@
-"use client";
 import React from "react";
 import { Dot } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import NavLink from "./navlink";
 import SignInButton from "../auth/signIn";
-import { useSession } from "next-auth/react";
+import { UserInfo } from "../auth/user-info";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/auth";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -14,8 +15,8 @@ const navLinks = [
   { href: "/resource-hub", label: "Resource Hub" },
 ];
 
-export default function NavBar() {
-  const { data: session } = useSession();
+export default async function NavBar() {
+  const session = await getServerSession(authOptions);
   return (
     <div className="flex justify-between m-7 ">
       <Link href="/">
@@ -46,7 +47,7 @@ export default function NavBar() {
             );
           })}
         </div>
-        {session ? <SignInButton /> : "Hello"}
+        {session ? <SignInButton /> : <UserInfo />}
       </div>
     </div>
   );

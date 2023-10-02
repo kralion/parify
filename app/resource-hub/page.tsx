@@ -4,7 +4,30 @@ import React from "react";
 export default function Page() {
   return (
     <AppLayout>
-      <HubCard />
+      <HubCard
+        title="Classic RTO-488/LL"
+        price={1200}
+        rate={4}
+        srcImage="https://img.freepik.com/free-photo/creating_1048-1600.jpg?size=626&ext=jpg"
+      />
+      <HubCard
+        title="Roboto Silver 323-22-CKXL"
+        price={1800}
+        rate={3}
+        srcImage="https://img.freepik.com/free-photo/printing-abstract-form_1048-1585.jpg?size=626&ext=jpg"
+      />
+      <HubCard
+        title="Golden KIT-JUMBO-288"
+        price={2200}
+        rate={4}
+        srcImage="https://img.freepik.com/free-photo/printing-blue-human-heart_1048-1976.jpg?size=626&ext=jpg"
+      />
+      <HubCard
+        title="BLACK-Agressive 323-22-CKXL"
+        price={5000}
+        rate={5}
+        srcImage="https://img.freepik.com/free-photo/printing-human-heart_1048-1975.jpg?size=626&ext=jpg"
+      />
     </AppLayout>
   );
 }
