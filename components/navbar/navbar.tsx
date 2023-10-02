@@ -1,9 +1,11 @@
+"use client";
 import React from "react";
-import { Button } from "../ui/button";
 import { Dot } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import NavLink from "../navlink";
+import NavLink from "./navlink";
+import SignInButton from "../auth/signIn";
+import { useSession } from "next-auth/react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -13,6 +15,7 @@ const navLinks = [
 ];
 
 export default function NavBar() {
+  const { data: session } = useSession();
   return (
     <div className="flex justify-between m-7 ">
       <Link href="/">
@@ -43,7 +46,7 @@ export default function NavBar() {
             );
           })}
         </div>
-        <Button className="rounded-full uppercase px-5">Get Quote</Button>
+        {session ? <SignInButton /> : "Hello"}
       </div>
     </div>
   );

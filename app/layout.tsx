@@ -2,7 +2,7 @@ import NavBar from "@/components/pages/navbar";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Inter, Roboto_Condensed } from "next/font/google";
-import Head from "next/head";
+import { NextAuthProvider } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 const robotoCondensed = Roboto_Condensed({
@@ -29,13 +29,7 @@ export default function RootLayout({
         href="https://cdn-icons-png.flaticon.com/128/1722/1722082.png"
       />
       <body className={robotoCondensed.className}>
-        <div className="">
-          <NavBar />
-          {children}
-        </div>
-        <footer className="bg-gray-900 p-4 text-center text-white">
-          <p>© 2024 Brayan Joan. All rights reserved.</p>
-        </footer>
+        <NextAuthProvider>{children}</NextAuthProvider>
       </body>
     </html>
   );

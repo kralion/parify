@@ -1,9 +1,10 @@
-import PlanCard from "@/components/pages/plans/plan-card";
+import PlanCard from "@/components/how-it-works/plan-card";
 import { Button } from "@/components/ui/button";
 import React from "react";
 import Image from "next/image";
 import { Changa } from "next/font/google";
-import { ContactFormulario } from "@/components/component/contact-formulario";
+import { ContactFormulario } from "@/components/how-it-works/contact-formulario";
+import AppLayout from "@/components/global/app-layout";
 
 const rubiPixles = Changa({
   weight: ["400"],
@@ -11,7 +12,7 @@ const rubiPixles = Changa({
 });
 export default function Page() {
   return (
-    <div>
+    <AppLayout>
       <div>
         <div
           className=" space-y-7 p-7 "
@@ -102,6 +103,6 @@ export default function Page() {
         />
         <ContactFormulario />
       </div>
-    </div>
+    </AppLayout>
   );
 }

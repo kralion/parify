@@ -5,7 +5,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-export function CartCard() {
+export function HubCard() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32">
       <div className="container flex items-start gap-8 px-4 md:px-6">
