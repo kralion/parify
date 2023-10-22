@@ -43,21 +43,22 @@ export default function Home() {
               alt="Hero Image"
             />
           </div>
-          <footer className="flex justify-between bg-zinc-300">
-            <div className=" border-2 flex justify-center items-center bg-white rounded-lg w-64">
-              <Link href="/how-it-works">
-                <Button className="rounded-full uppercase px-5">
-                  Get Started
-                </Button>
-              </Link>
-            </div>
+          <section className="flex justify-between bg-zinc-300">
+            <Link
+              href="/how-it-works"
+              className=" border-2 flex justify-center items-center bg-white rounded-lg w-64"
+            >
+              <Button className="rounded-full uppercase px-5">
+                Get Started
+              </Button>
+            </Link>
             <FooterCard
               cardTitle="A world of posibilities"
               cardDescription="Discover our advanced manufacturing materials and technologies"
               cardImageSrc="https://img.icons8.com/?size=2x&id=ybVKrPU0Ehti&format=png"
             />
             <FooterCard
-              cardTitle="Quality that you can trust"
+              cardTitle="Quality that your company can trust"
               cardDescription="Explore our industrial-grade parts and advanced specification options"
               cardImageSrc="https://img.icons8.com/?size=2x&id=9bYF4MhakOfC&format=png"
             />
@@ -66,11 +67,9 @@ export default function Home() {
               cardDescription="Industrial-grade parts, fast delivery: 6 bussiness days max"
               cardImageSrc="https://img.icons8.com/?size=2x&id=24589&format=png"
             />
-          </footer>
+          </section>
         </div>
-        <div>
-          <FAQs />
-        </div>
+        <FAQs />
       </main>
     </AppLayout>
   );

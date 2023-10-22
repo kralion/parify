@@ -26,7 +26,7 @@ export default function FooterCard({
             <CardTitle className="flex gap-1">
               {cardTitle}
               <ChevronRight
-                className="group-hover:ml-3 duration-200 group-hover:opacity-100 opacity-0"
+                className="group-hover:ml-4 duration-200 group-hover:opacity-100 opacity-0"
                 size={20}
               />
             </CardTitle>

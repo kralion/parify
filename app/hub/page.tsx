@@ -1,5 +1,6 @@
 import AppLayout from "@/components/global/app-layout";
-import { HubCard } from "@/components/resource-hub/hub-card";
+import { HubCard } from "@/components/hub/hub-card";
+import { ShoppingCartIcon } from "lucide-react";
 import React from "react";
 export default function Page() {
   return (
@@ -28,6 +29,9 @@ export default function Page() {
         rate={5}
         srcImage="https://img.freepik.com/free-photo/printing-human-heart_1048-1975.jpg?size=626&ext=jpg"
       />
+      <button className="animate-bounce rounded-full m-5 shadow-lg shadow-red-500 bg-slate-800 text-white p-3  fixed bottom-0 right-0">
+        <ShoppingCartIcon size={25} />
+      </button>
     </AppLayout>
   );
 }

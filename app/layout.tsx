@@ -8,6 +8,7 @@ const robotoCondensed = Roboto_Condensed({
   subsets: ["latin"],
   display: "swap",
   weight: ["300", "400", "700"],
+  preload: true,
 });
 
 export const metadata: Metadata = {

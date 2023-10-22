@@ -1,5 +1,5 @@
 import React from "react";
-import { Dot } from "lucide-react";
+import { BellDotIcon, BellRing, Dot } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import NavLink from "./navlink";
@@ -12,7 +12,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/how-it-works", label: "How it Works" },
   { href: "/capabilities", label: "Capabilities" },
-  { href: "/resource-hub", label: "Resource Hub" },
+  { href: "/hub", label: "Hub" },
 ];
 
 export default async function NavBar() {
@@ -32,12 +32,12 @@ export default async function NavBar() {
         </h2>
       </Link>
       <div className="flex gap-16 items-center">
-        <div className="flex gap-3.5">
+        <div className="flex gap-2">
           {navLinks.map((link) => {
             return (
               <NavLink
                 activeClassName="bg-slate-900 text-slate-50 rounded-full w-32 dark:bg-slate-50 dark:text-slate-300 flex py-2 items-center justify-center pr-2 "
-                className="border w-32  flex items-center py-2 justify-center border-slate-200 bg-white pr-2 hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:bg-slate-950 dark:hover:bg-slate-800 dark:hover:text-slate-50 rounded-full"
+                className="border w-32   flex items-center py-2 justify-center border-slate-200 bg-white pr-2 hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:bg-slate-950 dark:hover:bg-slate-800 dark:hover:text-slate-50 rounded-full"
                 key={link.href}
                 href={link.href}
               >
@@ -47,7 +47,10 @@ export default async function NavBar() {
             );
           })}
         </div>
-        {session ? <SignInButton /> : <UserInfo />}
+        <div className="flex items-center gap-2">
+          <BellDotIcon size={20} />
+          {session ? <SignInButton /> : <UserInfo />}
+        </div>
       </div>
     </div>
   );
