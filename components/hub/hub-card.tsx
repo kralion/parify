@@ -4,6 +4,7 @@ import { Star } from "lucide-react";
 import Image from "next/image";
 import { HubAlert } from "./hub-alert";
 import { useState } from "react";
+import { Profile } from "../component/profile";
 
 const stars = [1, 2, 3, 4, 5];
 const sizes = ["CA", "XY", "AA", "XR", "RTS"];
@@ -68,6 +69,7 @@ export function HubCard({
             Fabric: 100% Cotton. Care: Machine wash cold, tumble dry low.
           </p>
         </div>
+        <Profile />
       </div>
     </section>
   );

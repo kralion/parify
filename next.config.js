@@ -8,6 +8,7 @@ const nextConfig = {
       "cdn.pixabay.com",
       "img.icons8.com",
       "icons8.com",
+      "s3-symbol-logo.tradingview.com",
     ],
   },
 };
