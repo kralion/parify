@@ -6,10 +6,6 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     <div>
       <NavBar />
       {children}
-
-      <footer className="bg-gray-900 p-4 mt-14 text-center text-white">
-        <p>© 2024 Brayan Joan. All rights reserved.</p>
-      </footer>
     </div>
   );
 }

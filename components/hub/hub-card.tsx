@@ -27,12 +27,12 @@ export function HubCard({
       <div className="container  group flex items-start gap-8 px-4 md:px-6">
         <Image
           alt="Sneaker Image"
-          className="aspect-[1/1] object-cover object-center rounded-md shadow-sm opacity-80 group-hover:opacity-100 transition-opacity "
+          className="aspect-[1/1]  object-cover object-center rounded-md shadow-sm opacity-80  transition-opacity "
           height={400}
           src={srcImage}
           width={400}
         />
-        <div className="space-y-6">
+        <div className="space-y-6 border-[1px] py-3 px-7 rounded-xl group-hover:shadow-md">
           <h1 className="text-3xl font-bold tracking-tighter">{title}</h1>
           <div className="flex space-x-3">
             {stars.map((_, i) => (
