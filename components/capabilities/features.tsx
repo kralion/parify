@@ -18,12 +18,12 @@ export function Features() {
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 items-center">
           <div className="flex flex-col justify-center space-y-8 text-center">
-            <div className="space-y-2">
-              <h1
-                className={`" ${inter.className} text-3xl font-black tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-l from-black via-gray-800 to-gray-100"`}
+            <div className="space-y-10">
+              <span
+                className={`" ${inter.className} shadow-lg shadow-violet-300 text-black bg-purple-200 py-5 px-10  rounded-xl font-black text-4xl`}
               >
                 Discover Our Unique Features
-              </h1>
+              </span>
               <p className="max-w-[600px] text-gray-900 md:text-xl dark:text-zinc-100 mx-auto">
                 Our features are designed to enhance your productivity and
                 streamline your workflow.

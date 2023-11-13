@@ -20,11 +20,11 @@ export default function Home() {
             <div className="space-y-7">
               <h3 className=" text-6xl">
                 Discover the joy of <br />
-                <span className="bg-violet-300 px-2 rounded-xl">
+                <span className="bg-purple-300 px-2 rounded-xl">
                   effortles
                 </span>{" "}
                 industrial part sourcing
-                <span className="bg-violet-300 px-2 rounded-xl">
+                <span className="bg-purple-300 px-2 rounded-xl">
                   with Parify
                 </span>
               </h3>

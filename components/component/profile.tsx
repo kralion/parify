@@ -4,8 +4,8 @@ import Image from "next/image";
 export function Profile() {
   return (
     <div key="1" className="flex items-center justify-center ">
-      <div className="rounded-lg shadow-lg w-64 h-[460px] hover:shadow-2xl  hover:shadow-slate-700/50 transition-all duration-200 border-2 border-transparent hover:border-slate-500">
-        <div className="h-24 bg-gradient-to-r from-indigo-300 to-indigo-400 rounded-t-lg" />
+      <div className="rounded-lg w-64 h-[460px] shadow-2xl  shadow-slate-700/50 transition-all duration-200  border-slate-500">
+        <div className="h-24 bg-gradient-to-r from-purple-200 to-purple-300 rounded-t-lg" />
         <Image
           alt="User avatar"
           className="rounded-full -mt-12 border-4 border-white mx-auto"

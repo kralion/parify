@@ -12,7 +12,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/how-it-works", label: "How it Works" },
   { href: "/capabilities", label: "Capabilities" },
-  { href: "/hub", label: "Hub" },
+  { href: "/hubs-base", label: "Hub Base" },
 ];
 
 export default async function NavBar() {
