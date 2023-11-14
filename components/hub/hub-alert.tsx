@@ -1,3 +1,4 @@
+"use client";
 import { Rocket } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { useState } from "react";

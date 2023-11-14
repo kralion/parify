@@ -1,37 +1,45 @@
-"use client";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
 import Image from "next/image";
-import { HubAlert } from "./hub-alert";
-import { Profile } from "../component/profile";
+import { Profile } from "@/components/component/profile";
+import { kv } from "@vercel/kv";
+import { HubAlert } from "@/components/hub/hub-alert";
+
+async function Hub({ params }: { params: { user: string } }) {
+  const cart = await kv.get<{ id: string; quantity: number }[]>(params.user);
+  return (
+    <div>
+      {cart?.map((item) => (
+        <div key={item.id}>
+          {item.id} - {item.quantity}
+        </div>
+      ))}
+    </div>
+  );
+}
 
 const stars = [1, 2, 3, 4, 5];
 const sizes = ["CA", "XY", "AA", "XR", "RTS"];
 
-type Props = {
+type TProps = {
   title: string;
   price: number;
-  srcImage?: string;
-  rate?: number;
+  srcImage: string;
+  rate: number;
 };
 
-export function HubCard({
-  srcImage = "https://img.freepik.com/free-photo/genderneutral-hand-lifting-up-from-structure-3d-printed-round-object-made-from-recycled-plastic-futuristic-concept-new-working-possibilities-small-businesses-by-3d-printing-jpg-photo_633478-545.jpg?size=626&ext=jpg",
-  title,
-  price,
-  rate = 3,
-}: Props) {
+export function HubCard({ title, price, srcImage, rate }: TProps) {
   return (
     <section className="py-12  ">
       <div className="container  group flex items-start gap-8 px-4 md:px-6">
         <Image
           alt="Sneaker Image"
-          className="aspect-[1/1]  object-cover object-center rounded-md shadow-sm opacity-80  transition-opacity "
+          className="aspect-[1/1] object-cover object-center rounded-md shadow-sm opacity-80 group-hover:opacity-100 transition-opacity "
           height={400}
           src={srcImage}
           width={400}
         />
-        <div className="space-y-6 border-[1px] py-3 px-7 rounded-xl group-hover:shadow-md">
+        <div className="space-y-6">
           <h1 className="text-3xl font-bold tracking-tighter">{title}</h1>
           <div className="flex space-x-3">
             {stars.map((_, i) => (
