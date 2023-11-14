@@ -10,6 +10,7 @@ export default function Page() {
         price={1200}
         rate={4}
         srcImage="https://img.freepik.com/free-photo/creating_1048-1600.jpg?size=626&ext=jpg"
+        //https://img.freepik.com/free-photo/genderneutral-hand-lifting-up-from-structure-3d-printed-round-object-made-from-recycled-plastic-futuristic-concept-new-working-possibilities-small-businesses-by-3d-printing-jpg-photo_633478-545.jpg?size=626&ext=jpg
       />
       <HubCard
         title="Roboto Silver 323-22-CKXL"
