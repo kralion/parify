@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
 import Image from "next/image";
 import { HubAlert } from "./hub-alert";
-import { useState } from "react";
 import { Profile } from "../component/profile";
 
 const stars = [1, 2, 3, 4, 5];
