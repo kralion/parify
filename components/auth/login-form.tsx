@@ -6,22 +6,37 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Apple } from "lucide-react";
 import { signIn } from "next-auth/react";
+import TermsAndPolicy from "./terms";
 
 export function LoginForm() {
   return (
     <div className="bg-gray-100 min-h-screen  flex items-center justify-center">
-      <div className="rounded-lg  shadow-lg bg-white p-6 space-y-6 border border-slate-200   dark:border-slate-800">
+      <div className="rounded-2xl  shadow-lg bg-white p-10 space-y-10 border border-slate-200   dark:border-slate-800">
         <div className="space-y-2 text-center">
-          <h1 className="text-3xl font-bold">Login</h1>
+          <div className="flex gap-2 items-center justify-center">
+            <h1 className="text-3xl font-bold">Login to</h1>
+            <h2 className="text-3xl  flex items-center font-navaMono">
+              <Image
+                src="https://img.freepik.com/premium-vector/elegant-letter-sp-ps-minimalist-logo_649646-229.jpg?size=626&ext=jpg"
+                className="object-contain rounded-lg"
+                width={50}
+                height={50}
+                alt="Logo"
+              />
+              ARIFY
+            </h2>
+          </div>
           <p className="text-zinc-500  dark:text-zinc-400">
-            By logging in, you accept our
-            <Link className="text-blue-500 hover:text-blue-700" href="#">
-              terms
-            </Link>
-            and
-            <Link className="text-blue-500 hover:text-blue-700" href="#">
-              privacy policy
-            </Link>
+            By logging in, you accept our{" "}
+            <TermsAndPolicy>
+              <span className="text-blue-500 hover:text-blue-700"> terms </span>
+            </TermsAndPolicy>{" "}
+            and{" "}
+            <TermsAndPolicy>
+              <span className="text-blue-500 hover:text-blue-700">
+                privacy policy
+              </span>
+            </TermsAndPolicy>
             .{"\n"}
           </p>
         </div>
@@ -30,7 +45,7 @@ export function LoginForm() {
             <Label htmlFor="email">Email</Label>
             <Input
               id="email"
-              placeholder="m@example.com"
+              placeholder="jhondoe@example.com"
               required
               type="email"
             />
@@ -51,18 +66,13 @@ export function LoginForm() {
               Login with Google
             </div>
           </Button>
-          <Button className="w-full bg-black text-white" variant="outline">
-            <div className="flex items-center gap-3  justify-center">
-              <Apple size={24} />
-              Login with Apple
-            </div>
-          </Button>
+
           <Button
             onClick={() =>
               signIn("credentials", { callbackUrl: "/capabilities" })
             }
-            className="w-full bg-black text-white"
-            variant="outline"
+            className="w-full  "
+            variant="default"
           >
             Sign In
           </Button>

@@ -49,7 +49,7 @@ export default async function NavBar() {
         </div>
         <div className="flex items-center gap-2">
           <BellDotIcon size={20} />
-          {session ? <SignInButton /> : <UserInfo />}
+          <SignInButton />
         </div>
       </div>
     </div>

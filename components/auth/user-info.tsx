@@ -3,6 +3,7 @@ import { useSession } from "next-auth/react";
 
 export const UserInfo = () => {
   const { data: session } = useSession();
+  console.log(session);
 
   return (
     <>
