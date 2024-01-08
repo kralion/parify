@@ -1,13 +1,11 @@
-import React from "react";
-import { BellDotIcon, BellRing, Dot } from "lucide-react";
+"use client";
+import { BellDotIcon, Dot } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import NavLink from "./navlink";
 import SignInButton from "../auth/signIn";
 import { UserInfo } from "../auth/user-info";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
-
+import NavLink from "./navlink";
+import { useSession } from "next-auth/react";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/how-it-works", label: "How it Works" },
@@ -15,8 +13,8 @@ const navLinks = [
   { href: "/hubs-base", label: "Hub Base" },
 ];
 
-export default async function NavBar() {
-  const session = await getServerSession(authOptions);
+export default function NavBar() {
+  const { data: session } = useSession();
   return (
     <div className="flex justify-between m-7 ">
       <Link href="/">
@@ -49,7 +47,7 @@ export default async function NavBar() {
         </div>
         <div className="flex items-center gap-2">
           <BellDotIcon size={20} />
-          <SignInButton />
+          {session ? <UserInfo /> : <SignInButton />}
         </div>
       </div>
     </div>

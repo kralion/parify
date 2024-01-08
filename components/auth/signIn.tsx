@@ -1,11 +1,15 @@
-"use client";
 import React from "react";
-import { signIn } from "next-auth/react";
 import { Button } from "../ui/button";
 
 export default function SignInButton() {
+  function redirectToLoginUnauthenticated() {
+    alert("You need to be logged in to access this page");
+  }
   return (
-    <Button className="rounded-full uppercase px-5" onClick={() => signIn()}>
+    <Button
+      className="rounded-full uppercase px-5"
+      onClick={redirectToLoginUnauthenticated}
+    >
       Sign In
     </Button>
   );

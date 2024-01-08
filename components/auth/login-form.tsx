@@ -1,14 +1,21 @@
 "use client";
-import Link from "next/link";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import Image from "next/image";
-import { Apple } from "lucide-react";
-import { signIn } from "next-auth/react";
 import TermsAndPolicy from "./terms";
+import { useSession, signIn } from "next-auth/react";
 
 export function LoginForm() {
+  const handleSubmit = async (event: any) => {
+    event.preventDefault();
+    signIn("credentials", {
+      email: "jhon@gmail.com",
+      password: "12345678",
+      callbackUrl: "/",
+    });
+  };
+
   return (
     <div className="bg-gray-100 min-h-screen  flex items-center justify-center">
       <div className="rounded-2xl  shadow-lg bg-white p-10 space-y-10 border border-slate-200   dark:border-slate-800">
@@ -50,7 +57,11 @@ export function LoginForm() {
               type="email"
             />
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="space-y-2">
+            <Label htmlFor="email">Password</Label>
+            <Input id="password" required type="password" />
+          </div>
+          <div className="flex items-center space-x-2 ">
             <hr className="flex-grow border-zinc-200 dark:border-zinc-700" />
             <span className="text-zinc-400 dark:text-zinc-300 text-sm">OR</span>
             <hr className="flex-grow border-zinc-200 dark:border-zinc-700" />
@@ -67,13 +78,7 @@ export function LoginForm() {
             </div>
           </Button>
 
-          <Button
-            onClick={() =>
-              signIn("credentials", { callbackUrl: "/capabilities" })
-            }
-            className="w-full  "
-            variant="default"
-          >
+          <Button onClick={handleSubmit} className="w-full  " variant="default">
             Sign In
           </Button>
         </div>
