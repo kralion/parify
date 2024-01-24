@@ -16,7 +16,7 @@ const navLinks = [
 export default function NavBar() {
   const { data: session } = useSession();
   return (
-    <div className="flex justify-between m-7 ">
+    <div className="lg:flex justify-between m-7  hidden  ">
       <Link href="/">
         <h2 className="text-4xl  flex items-center font-navaMono">
           <Image
@@ -29,7 +29,7 @@ export default function NavBar() {
           ARIFY
         </h2>
       </Link>
-      <div className="flex gap-16 items-center">
+      <div className="flex gap-16 items-center ">
         <div className="flex gap-2">
           {navLinks.map((link) => {
             return (

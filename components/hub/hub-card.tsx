@@ -31,7 +31,7 @@ type TProps = {
 export function HubCard({ title, price, srcImage, rate }: TProps) {
   return (
     <section className="py-12  ">
-      <div className="container  group flex items-start gap-8 px-4 md:px-6">
+      <div className="container  group flex lg:flex-row flex-col items-start gap-8 px-4 md:px-6">
         <Image
           alt="Sneaker Image"
           className="aspect-[1/1] object-cover object-center rounded-md shadow-sm opacity-80 group-hover:opacity-100 transition-opacity "

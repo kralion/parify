@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function Profile() {
   return (
-    <div key="1" className="flex items-center justify-center ">
+    <div key="1" className="flex lg:w-fit w-full  items-center justify-center ">
       <div className="rounded-lg w-64 h-[460px] shadow-2xl  shadow-slate-700/50 transition-all duration-200  border-slate-500">
         <div className="h-24 bg-gradient-to-r from-purple-200 to-purple-300 rounded-t-lg" />
         <Image

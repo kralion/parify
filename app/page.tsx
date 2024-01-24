@@ -38,17 +38,18 @@ export default function Home() {
 
             <Image
               src="https://img.freepik.com/free-vector/flat-abstract-wireframe-background_23-2149014845.jpg?size=626&ext=jpg"
+              className="hidden lg:flex"
               width={1200}
               height={2000}
               alt="Hero Image"
             />
           </div>
-          <section className="flex justify-between bg-zinc-300">
+          <section className="flex flex-col lg:flex-row lg:justify-between bg-zinc-300">
             <Link
               href="/how-it-works"
-              className=" border-2 flex justify-center items-center bg-white rounded-lg w-64"
+              className=" border-2 flex w-full lg:p-0 p-5 justify-center items-center bg-white rounded-lg lg:w-64"
             >
-              <Button className="rounded-full uppercase px-5">
+              <Button className="rounded-full lg:w-fit  w-full uppercase px-5">
                 Get Started
               </Button>
             </Link>

@@ -14,13 +14,13 @@ const inter = Inter({
 });
 export function Features() {
   return (
-    <section className={` w-full py-12 `}>
+    <section className="w-full py-12">
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 items-center">
           <div className="flex flex-col justify-center space-y-8 text-center">
             <div className="space-y-10">
               <span
-                className={`" ${inter.className} shadow-lg shadow-violet-300 text-black bg-purple-200 py-5 px-10  rounded-xl font-black text-4xl`}
+                className={`" ${inter.className} shadow-lg shadow-violet-300 text-black bg-purple-200 py-5 px-10  rounded-xl font-black lg:text-4xl`}
               >
                 Discover Our Unique Features
               </span>
@@ -30,7 +30,7 @@ export function Features() {
               </p>
             </div>
             <div className="w-full max-w-full space-y-4 mx-auto">
-              <div className="grid grid-cols-3 gap-8">
+              <div className="grid lg:grid-cols-3 grid-cols-1 gap-8">
                 <FeatureCard
                   title="Smart Inbox"
                   description=" Our Smart Inbox feature helps you manage your emails

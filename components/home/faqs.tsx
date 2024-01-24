@@ -8,8 +8,8 @@ import { CardContent, Card } from "@/components/ui/card";
 
 export function FAQs() {
   return (
-    <div className="flex justify-center items-center my-20 ">
-      <Card className="shadow-xl w-2/3 p-6 m-6 rounded-xl">
+    <div className="flex justify-center items-center lg:my-20  ">
+      <Card className="shadow-xl lg:w-2/3 p-6 m-6 rounded-xl">
         <CardContent className="p-6">
           <h2 className="text-2xl font-semibold">Frequently Asked Questions</h2>
           <Accordion className="w-full mt-4" type="multiple">
