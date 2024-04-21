@@ -1,10 +1,10 @@
-"use client";
+import { authOptions } from "@/lib/auth";
 import { Dot } from "lucide-react";
-import { useSession } from "next-auth/react";
+import { getServerSession } from "next-auth";
 import Image from "next/image";
 import Link from "next/link";
-import SignInButton from "../auth/signIn";
 import { UserInfo } from "../auth/user-info";
+import { Button } from "../ui/button";
 import NavLink from "./navlink";
 const navLinks = [
   { href: "/parify/", label: "Home" },
@@ -13,8 +13,8 @@ const navLinks = [
   { href: "/parify/hubs-base", label: "Hub Base" },
 ];
 
-export default function NavBar() {
-  const { data: session } = useSession();
+export default async function NavBar() {
+  const session = await getServerSession(authOptions);
   return (
     <div className="lg:flex justify-between m-7  hidden  ">
       <Link href="/parify">
@@ -46,7 +46,18 @@ export default function NavBar() {
           })}
         </div>
         <div className="flex items-center gap-2">
-          {session ? <UserInfo /> : <SignInButton />}
+          {session ? (
+            <UserInfo />
+          ) : (
+            <Link href="/parify/sign-in">
+              <Button
+                variant="secondary"
+                className="rounded-full uppercase px-5"
+              >
+                Sign In
+              </Button>
+            </Link>
+          )}
         </div>
       </div>
     </div>

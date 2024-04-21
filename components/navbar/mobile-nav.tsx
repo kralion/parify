@@ -1,4 +1,3 @@
-"use client";
 import {
   Menubar,
   MenubarContent,
@@ -8,12 +7,12 @@ import {
   MenubarTrigger,
 } from "@/components/ui/menubar";
 import { LucideMenu } from "lucide-react";
+import { authOptions } from "@/lib/auth";
+import { getServerSession } from "next-auth";
 import Image from "next/image";
 import Link from "next/link";
-import SignInButton from "../auth/signIn";
 import { UserInfo } from "../auth/user-info";
-
-import { useSession } from "next-auth/react";
+import { Button } from "../ui/button";
 const navLinks = [
   { href: "/parify", label: "Home" },
   { href: "/parify/how-it-works", label: "How it Works" },
@@ -21,8 +20,8 @@ const navLinks = [
   { href: "/parify/hubs-base", label: "Hub Base" },
 ];
 
-export default function MobileNavBar() {
-  const { data: session } = useSession();
+export default async function MobileNavBar() {
+  const session = await getServerSession(authOptions);
   return (
     <div className="flex justify-between m-7 lg:hidden ">
       <Link href="/parify">
@@ -55,7 +54,18 @@ export default function MobileNavBar() {
             <MenubarSeparator />
             <MenubarItem>
               <div className="flex items-center gap-2">
-                {session ? <UserInfo /> : <SignInButton />}
+                {session ? (
+                  <UserInfo />
+                ) : (
+                  <Link href="/parify/sign-in">
+                    <Button
+                      variant="secondary"
+                      className="rounded-full uppercase px-5"
+                    >
+                      Sign In
+                    </Button>
+                  </Link>
+                )}
               </div>
             </MenubarItem>
           </MenubarContent>
