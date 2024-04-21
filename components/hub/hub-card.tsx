@@ -3,7 +3,7 @@ import { Star } from "lucide-react";
 import Image from "next/image";
 import { Profile } from "@/components/component/profile";
 import { kv } from "@vercel/kv";
-import { HubAlert } from "@/components/hub/hub-alert";
+import { useToast } from "@/components/ui/use-toast";
 
 async function Hub({ params }: { params: { user: string } }) {
   const cart = await kv.get<{ id: string; quantity: number }[]>(params.user);
@@ -26,9 +26,18 @@ type TProps = {
   price: number;
   srcImage: string;
   rate: number;
+  addToCart: (count: number) => void;
 };
 
-export function HubCard({ title, price, srcImage, rate }: TProps) {
+export function HubCard({ title, price, srcImage, rate, addToCart }: TProps) {
+  const { toast } = useToast();
+  const HandleAddToCart = () => {
+    addToCart(1);
+    toast({
+      title: "Se ha añadido al carrito",
+      description: "Los detalles del producto han sido añadidos al carrito.",
+    });
+  };
   return (
     <section className="py-12  ">
       <div className="container  group flex lg:flex-row flex-col items-start gap-8 px-4 md:px-6">
@@ -70,8 +79,12 @@ export function HubCard({ title, price, srcImage, rate }: TProps) {
               </Button>
             ))}
           </div>
-          {/* //TODO: HubAlert functionality */}
-          <HubAlert />
+          <Button
+            onClick={HandleAddToCart}
+            className="w-full h-12 rounded-md bg-zinc-900 text-zinc-50 shadow-sm dark:bg-zinc-50 dark:text-zinc-900"
+          >
+            Add to Cart
+          </Button>
           <p className="text-xs text-zinc-500 dark:text-zinc-400">
             Fabric: 100% Cotton. Care: Machine wash cold, tumble dry low.
           </p>
