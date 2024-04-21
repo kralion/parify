@@ -42,7 +42,7 @@ export default function Page() {
       {hubCards.map((hubCard, index) => (
         <HubCard addToCart={addToCart} key={index} {...hubCard} />
       ))}
-      <button className="rounded-full flex gap-1 m-5 shadow-lg shadow-purple-300 bg-purple-400 text-white p-3  fixed bottom-0 left-0">
+      <button className="rounded-full flex gap-2 m-5 shadow-lg shadow-purple-300 bg-purple-400 text-white p-3  fixed bottom-0 left-0">
         <ShoppingCartIcon size={25} />
         {cartCount}
       </button>

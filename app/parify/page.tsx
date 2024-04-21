@@ -1,6 +1,7 @@
 import { FAQs } from "@/components/home/faqs";
 import FooterCard from "@/components/home/footer-card";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -41,18 +42,17 @@ export default function Home() {
           />
         </div>
         <section className="flex flex-col lg:flex-row lg:justify-between dark:bg-zinc-800 bg-zinc-300">
-          <Link
-            href="/sign-in"
-            className=" border-2 flex w-full lg:p-0 p-5 justify-center items-center dark:bg-zinc-800 bg-white rounded-lg lg:w-64"
-          >
-            <Button className="rounded-full  lg:w-fit  w-full uppercase px-5 group">
-              Get Started
-              <MoveRight
-                size={15}
-                className="group-hover:translate-x-2 ml-2 duration-200 ease-linear "
-              />
-            </Button>
-          </Link>
+          <Card className="flex items-center group cursor-pointer duration-200">
+            <Link href="/hubs-base">
+              <Button className="rounded-full uppercase px-5 group w-36">
+                Go to Hub
+                <MoveRight
+                  size={15}
+                  className="group-hover:translate-x-2 ml-2 duration-200 ease-linear "
+                />
+              </Button>
+            </Link>
+          </Card>
           <FooterCard
             cardTitle="A world of posibilities"
             cardDescription="Discover our advanced manufacturing materials and technologies"

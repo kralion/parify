@@ -29,7 +29,7 @@ export default function RootLayout({
         rel="icon"
         href="https://cdn-icons-png.flaticon.com/128/1722/1722082.png"
       />
-      <body className={robotoCondensed.className}>
+      <body className={`${robotoCondensed.className} dark:bg-slate-900`}>
         <ThemeProvider attribute="class" defaultTheme="system">
           <NextAuthProvider>{children}</NextAuthProvider>
         </ThemeProvider>

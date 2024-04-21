@@ -21,13 +21,18 @@ export default function UserInfo() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Image
-          src={session?.data?.user.foto || ""}
-          alt="User"
-          width={40}
-          height={40}
-          className="rounded-full cursor-pointer hover:opacity-80 duration-200"
-        />
+        <div className="flex items-center gap-3 group cursor-pointer hover:opacity-80 duration-200">
+          <Image
+            src={session?.data?.user.foto || ""}
+            alt="User"
+            width={40}
+            height={40}
+            className="rounded-full "
+          />
+          <span className="text-slate-900 dark:text-slate-50 group-hover:underline duration-200">
+            {session?.data?.user.nombres}
+          </span>
+        </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-44 m-3">
         <DropdownMenuLabel>Profile </DropdownMenuLabel>

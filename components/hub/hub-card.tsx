@@ -34,8 +34,8 @@ export function HubCard({ title, price, srcImage, rate, addToCart }: TProps) {
   const HandleAddToCart = () => {
     addToCart(1);
     toast({
-      title: "Se ha añadido al carrito",
-      description: "Los detalles del producto han sido añadidos al carrito.",
+      title: "Printer Added",
+      description: "All its details are in the description",
     });
   };
   return (

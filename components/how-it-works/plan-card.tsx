@@ -27,7 +27,7 @@ export default function PlanCard({
   cardPlanExchange,
 }: PlanCardProps) {
   return (
-    <Card className="hover:bg-purple-300 rounded-2xl hover:shadow-md bg-zinc-100 border-none group cursor-pointer duration-200 space-y-7">
+    <Card className="hover:bg-purple-300 dark:bg-slate-900 rounded-2xl hover:shadow-md bg-zinc-100 border-none group cursor-pointer duration-200 space-y-7">
       <CardHeader className="space-y-3">
         <CardTitle className="flex gap-1 text-md font-normal items-center">
           <CircleDashed

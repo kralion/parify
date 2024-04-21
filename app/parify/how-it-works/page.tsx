@@ -60,10 +60,10 @@ export default function Page() {
         <footer className="lg:grid sm:flex sm:flex-col lg:grid-flow-row grid-flow-col grid-cols-1  lg:grid-cols-5 bg-zinc-300">
           <div
             className=" border-2 lg:col-span-2  p-5 flex lg:flex-row flex-col justify-between items-
-           bg-white rounded-lg "
+           bg-white dark:bg-slate-900 rounded-lg "
           >
             <h3>CHARACTERISTICS</h3>
-            <div className="lg:pr-10 px-5 gap-3 lg:grid-flow-col grid-rows-1 grid-flow-row  grid lg:grid-rows-5 text-zinc-500">
+            <div className="lg:pr-10 px-5 gap-3 lg:grid-flow-col grid-rows-1 grid-flow-row  grid lg:grid-rows-5 ">
               <span>Technology :</span>
               <span>Post Processing :</span>
               <span>Quality :</span>
@@ -71,21 +71,21 @@ export default function Page() {
               <span>Maximum sizes :</span>
             </div>
           </div>
-          <div className=" border-2 grid lg:grid-rows-5 grid-cols-1 lg:grid-flow-row grid-flow-col gap-3 p-5   bg-white dark:bg-zinc-800 rounded-lg ">
+          <div className=" border-2 grid lg:grid-rows-5 grid-cols-1 lg:grid-flow-row grid-flow-col gap-3 p-5   bg-white dark:bg-slate-900 rounded-lg ">
             <span>L-PBF</span>
             <span>Medi blasting, CNC machining</span>
             <span>Industrial Grade</span>
             <span>From 12 business day</span>
             <span>Up to 500 x 500 x 500mm</span>
           </div>
-          <div className=" border-2 dark:bg-zinc-800 grid lg:grid-rows-5 grid-cols-1 lg:grid-flow-row grid-flow-col gap-3 p-5   bg-white rounded-lg ">
+          <div className=" border-2 dark:bg-slate-900 grid lg:grid-rows-5 grid-cols-1 lg:grid-flow-row grid-flow-col gap-3 p-5   bg-white rounded-lg ">
             <span>SLS, MLF, FDM </span>
             <span>Dyeing, smothing, painting</span>
             <span>Industrial Grade</span>
             <span>From 6 business day</span>
             <span>Up to 700 x 380 x 580mm</span>
           </div>
-          <div className=" border-2 dark:bg-zinc-800 grid lg:grid-rows-5 grid-cols-1 lg:grid-flow-row grid-flow-col gap-3 p-5   bg-white rounded-lg ">
+          <div className=" border-2 dark:bg-slate-900 grid lg:grid-rows-5 grid-cols-1 lg:grid-flow-row grid-flow-col gap-3 p-5   bg-white rounded-lg ">
             <span>CNC machining</span>
             <span></span>
             <span>Industrial Grade</span>
