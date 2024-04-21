@@ -102,7 +102,7 @@ export default async function NavBar() {
                   {session ? (
                     <UserInfo />
                   ) : (
-                    <Link href="/sign-in">
+                    <Link href="/">
                       <Button
                         variant="secondary"
                         className="rounded-full uppercase px-5"

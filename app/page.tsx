@@ -15,23 +15,31 @@ export default function Page() {
   const [values, setValues] = React.useState({ email: "", password: "" });
   const [loading, setLoading] = React.useState(false);
   const router = useRouter();
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     setLoading(true);
     event.preventDefault();
+    setLoading(true);
+
     const result = await signIn("credentials", {
+      redirect: false,
       email: values.email,
       password: values.password,
-      callbackUrl: "/parify",
     });
+
+    setLoading(false);
+
     if (result?.error) {
       toast({
-        title: "Error de autenticacion",
-        description: "Las credenciales son incorrectas, intenta de nuevo.",
+        title: "Authentication Error",
+        description:
+          "The credentials are located in the end of the login form.",
+        duration: 2000,
+        variant: "destructive",
       });
+    } else {
+      router.push("/parify");
     }
-    setLoading(false);
-    router.push("/parify");
-  };
+  }
   return (
     <div className="bg-gray-100 dark:bg-slate-900 min-h-screen  flex items-center justify-center">
       <div className="rounded-2xl  shadow-lg bg-white dark:bg-slate-800 p-10 space-y-10 border border-slate-200   dark:border-slate-800">

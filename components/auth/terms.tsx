@@ -30,13 +30,11 @@ export default function TermsAndPolicy({
         <AlertDialogHeader>
           <AlertDialogTitle>Terms And Policy</AlertDialogTitle>
           <AlertDialogDescription>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            auctor, nunc id tincidunt tincidunt, urna elit tincidunt tellus, id
-            lacinia purus nunc id nunc. Fusce auctor, mauris id lacinia lacinia,
-            nunc nunc tincidunt justo, id lacinia nunc nunc ac nunc. Sed vitae
-            nunc id nunc tincidunt tincidunt. Nulla facilisi. Sed id nunc id
-            nunc tincidunt tincidunt. Nulla facilisi. Sed id nunc id nunc
-            tincidunt tincidunt. Nulla facilisi.
+            The privacy policy is a legal statement that explains how a company
+            collects, stores, and shares personal data provided by its users.
+            <strong>Parify</strong> is a solid privacy-focused alternative to
+            other platforms. It is a privacy-focused platform where sellers can
+            sell their products without worrying about their data being misused.
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
                 <AccordionTrigger>Is it accessible?</AccordionTrigger>

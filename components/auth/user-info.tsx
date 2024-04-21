@@ -13,7 +13,7 @@ import React from "react";
 import { useTheme } from "next-themes";
 export default function UserInfo() {
   const handleSignOut = async () => {
-    await signOut({ redirect: true, callbackUrl: "/sign-in" });
+    await signOut({ redirect: true, callbackUrl: "/" });
   };
 
   const session = useSession();
