@@ -1,16 +1,14 @@
-import AppLayout from "@/components/global/app-layout";
 import { HubCard } from "@/components/hub/hub-card";
 import { ShoppingCartIcon } from "lucide-react";
 import React from "react";
 export default function Page() {
   return (
-    <AppLayout>
+    <>
       <HubCard
         title="Classic RTO-488/LL"
         price={1200}
         rate={4}
         srcImage="https://img.freepik.com/free-photo/creating_1048-1600.jpg?size=626&ext=jpg"
-        //https://img.freepik.com/free-photo/genderneutral-hand-lifting-up-from-structure-3d-printed-round-object-made-from-recycled-plastic-futuristic-concept-new-working-possibilities-small-businesses-by-3d-printing-jpg-photo_633478-545.jpg?size=626&ext=jpg
       />
       <HubCard
         title="Roboto Silver 323-22-CKXL"
@@ -34,6 +32,6 @@ export default function Page() {
       <button className="rounded-full m-5 shadow-lg shadow-purple-300 bg-purple-400 text-white p-3  fixed bottom-0 right-0">
         <ShoppingCartIcon size={25} />
       </button>
-    </AppLayout>
+    </>
   );
 }

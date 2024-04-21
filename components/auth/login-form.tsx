@@ -2,18 +2,30 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Key, User } from "lucide-react";
+import { signIn } from "next-auth/react";
 import Image from "next/image";
 import TermsAndPolicy from "./terms";
-import { useSession, signIn } from "next-auth/react";
+import { useToast } from "@/components/ui/use-toast";
+import { useRouter } from "next/navigation";
 
 export function LoginForm() {
+  const { toast } = useToast();
+  const router = useRouter();
   const handleSubmit = async (event: any) => {
     event.preventDefault();
-    signIn("credentials", {
-      email: "jhon@gmail.com",
-      password: "12345678",
-      callbackUrl: "/",
+    const result = await signIn("credentials", {
+      email: "brayan@gmail.com",
+      password: "Parify",
+      callbackUrl: "/parify",
     });
+    if (result?.error) {
+      toast({
+        title: "Error de autenticacion",
+        description: "Las credenciales son incorrectas, intenta de nuevo.",
+      });
+    }
+    router.push("/parify");
   };
 
   return (
@@ -81,6 +93,14 @@ export function LoginForm() {
           <Button onClick={handleSubmit} className="w-full  " variant="default">
             Sign In
           </Button>
+        </div>
+        <div className="flex justify-center gap-4 text-xs  text-zinc-600 dark:text-zinc-400">
+          <p className="flex items-center gap-1 font-mono ">
+            <User size={14} /> <span>brayan@gmail.com</span>
+          </p>
+          <p className="flex items-center gap-1 font-mono">
+            <Key size={14} /> <span>Parify</span>
+          </p>
         </div>
       </div>
     </div>

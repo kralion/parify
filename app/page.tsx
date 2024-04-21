@@ -1,4 +1,3 @@
-import AppLayout from "@/components/global/app-layout";
 import { FAQs } from "@/components/home/faqs";
 import FooterCard from "@/components/home/footer-card";
 import { Button } from "@/components/ui/button";
@@ -7,7 +6,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <AppLayout>
+    <>
       <main className="space-y-16">
         <div>
           <div
@@ -72,6 +71,6 @@ export default function Home() {
         </div>
         <FAQs />
       </main>
-    </AppLayout>
+    </>
   );
 }

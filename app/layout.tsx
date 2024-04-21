@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Inter, Roboto_Condensed } from "next/font/google";
 import { NextAuthProvider } from "./providers";
-
+import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 const robotoCondensed = Roboto_Condensed({
   subsets: ["latin"],
@@ -30,6 +30,7 @@ export default function RootLayout({
       />
       <body className={robotoCondensed.className}>
         <NextAuthProvider>{children}</NextAuthProvider>
+        <Toaster />
       </body>
     </html>
   );
