@@ -14,7 +14,23 @@ export default function Page() {
   const { toast } = useToast();
   const [values, setValues] = React.useState({ email: "", password: "" });
   const [loading, setLoading] = React.useState(false);
+  const [loadingGoogle, setLoadingGoogle] = React.useState(false);
   const router = useRouter();
+  async function signInGoogle() {
+    setLoadingGoogle(true);
+    const result = await signIn("google", {
+      callbackUrl: "/parify",
+    });
+    if (result?.error) {
+      toast({
+        title: "Authentication Error",
+        description: "An error occurred while trying to sign in with Google.",
+        duration: 2000,
+        variant: "destructive",
+      });
+    }
+    setLoadingGoogle(false);
+  }
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     setLoading(true);
     event.preventDefault();
@@ -42,7 +58,7 @@ export default function Page() {
   }
   return (
     <div className="bg-gray-100 dark:bg-slate-900 min-h-screen  flex items-center justify-center">
-      <div className="rounded-2xl  shadow-lg bg-white dark:bg-slate-800 p-10 space-y-10 border border-slate-200   dark:border-slate-800">
+      <div className="rounded-2xl  shadow-lg bg-white dark:bg-slate-800 p-10 space-y-5 border border-slate-200   dark:border-slate-800">
         <div className="space-y-2 text-center">
           <div className="flex gap-2 items-center justify-center">
             <h1 className="text-3xl font-bold">Login to</h1>
@@ -103,27 +119,31 @@ export default function Page() {
               </span>
               <hr className="flex-grow border-zinc-200 dark:border-zinc-700" />
             </div>
-            <Button className="w-full">
-              <div className="flex items-center gap-3 justify-center">
-                <Image
-                  src="https://img.icons8.com/?size=48&id=17949&format=png"
-                  width={24}
-                  height={24}
-                  alt="Logo"
-                />
-                Login with Google
-              </div>
-            </Button>
 
             <Button type="submit" className="w-full " variant="default">
               {loading ? (
-                <Loader className="animate-spin" size={24} />
+                <Loader className="animate-spin" size={20} />
               ) : (
                 "Sign In"
               )}
             </Button>
           </div>
-        </form>
+        </form>{" "}
+        <Button className="w-full">
+          {loading ? (
+            <Loader className="animate-spin" size={20} />
+          ) : (
+            <div className="flex items-center gap-3 justify-center">
+              <Image
+                src="https://img.icons8.com/?size=48&id=17949&format=png"
+                width={24}
+                height={24}
+                alt="Logo"
+              />
+              Continue with Google
+            </div>
+          )}
+        </Button>
         <div className="flex justify-center gap-4 text-xs  text-zinc-600 dark:text-zinc-400">
           <p className="flex items-center gap-1 font-mono ">
             <User size={14} /> <span>brayan@gmail.com</span>
