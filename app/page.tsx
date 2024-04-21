@@ -96,7 +96,7 @@ export default function Page() {
                 onChange={(e) =>
                   setValues({ ...values, email: e.target.value })
                 }
-                placeholder="jhondoe@example.com"
+                placeholder="brayan@gmail.com"
                 required
                 type="email"
               />
@@ -104,6 +104,7 @@ export default function Page() {
             <div className="space-y-2">
               <Label htmlFor="email">Password</Label>
               <Input
+                placeholder="*********"
                 onChange={(e) =>
                   setValues({ ...values, password: e.target.value })
                 }
@@ -128,8 +129,8 @@ export default function Page() {
               )}
             </Button>
           </div>
-        </form>{" "}
-        <Button className="w-full">
+        </form>
+        <Button onClick={signInGoogle} className="w-full">
           {loading ? (
             <Loader className="animate-spin" size={20} />
           ) : (
