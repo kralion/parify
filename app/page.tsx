@@ -60,9 +60,8 @@ export default function Page() {
     <div className="bg-gray-100 dark:bg-slate-900 min-h-screen  flex items-center justify-center">
       <div className="rounded-2xl  shadow-lg bg-white dark:bg-slate-800 p-10 space-y-5 border border-slate-200   dark:border-slate-800">
         <div className="space-y-2 text-center">
-          <div className="flex gap-2 items-center justify-center">
-            <h1 className="text-3xl font-bold">Login to</h1>
-            <h2 className="text-3xl  flex items-center font-navaMono">
+          <div className="flex flex-col gap-2 items-center justify-center">
+            <h2 className="text-3xl mb-5 flex items-center font-navaMono">
               <Image
                 src="https://img.freepik.com/premium-vector/elegant-letter-sp-ps-minimalist-logo_649646-229.jpg?size=626&ext=jpg"
                 className="object-contain rounded-lg"
@@ -72,6 +71,7 @@ export default function Page() {
               />
               ARIFY
             </h2>
+            <h3 className="text-3xl font-bold">Welcome Back!</h3>
           </div>
           <p className="text-zinc-500  dark:text-zinc-400">
             By logging in, you accept our{" "}
@@ -131,7 +131,7 @@ export default function Page() {
           </div>
         </form>
         <Button onClick={signInGoogle} className="w-full">
-          {loading ? (
+          {loadingGoogle ? (
             <Loader className="animate-spin" size={20} />
           ) : (
             <div className="flex items-center gap-3 justify-center">
