@@ -11,8 +11,8 @@ export default function FeatureCard({ children, title, description }: Props) {
       <div className="p-2 bg-purple-500 duration-200 group-hover:bg-opacity-100 bg-opacity-50 rounded-full">
         {children}
       </div>
-      <h2 className="text-xl font-bold text-gray-900">{title}</h2>
-      <p className="text-gray-600 dark:text-zinc-100">{description}</p>
+      <h2 className="text-xl font-bold dark:group-hover:text-black">{title}</h2>
+      <p className=" dark:text-zinc-400">{description}</p>
     </div>
   );
 }

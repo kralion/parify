@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Inter, Roboto_Condensed } from "next/font/google";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 import { NextAuthProvider } from "./providers";
 import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
@@ -29,7 +30,9 @@ export default function RootLayout({
         href="https://cdn-icons-png.flaticon.com/128/1722/1722082.png"
       />
       <body className={robotoCondensed.className}>
-        <NextAuthProvider>{children}</NextAuthProvider>
+        <ThemeProvider attribute="class" defaultTheme="system">
+          <NextAuthProvider>{children}</NextAuthProvider>
+        </ThemeProvider>
         <Toaster />
       </body>
     </html>

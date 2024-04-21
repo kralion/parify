@@ -20,11 +20,11 @@ export function Features() {
           <div className="flex flex-col justify-center space-y-8 text-center">
             <div className="space-y-10">
               <span
-                className={`" ${inter.className} shadow-lg shadow-violet-300 text-black bg-purple-200 py-5 px-10  rounded-xl font-black lg:text-4xl`}
+                className={`" ${inter.className} shadow-lg shadow-violet-300 text-black  bg-purple-200 py-5 px-10  rounded-xl font-black lg:text-4xl`}
               >
                 Discover Our Unique Features
               </span>
-              <p className="max-w-[600px] text-gray-900 md:text-xl dark:text-zinc-100 mx-auto">
+              <p className="max-w-[600px]  md:text-xl dark:text-zinc-100 mx-auto">
                 Our features are designed to enhance your productivity and
                 streamline your workflow.
               </p>

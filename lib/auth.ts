@@ -51,7 +51,7 @@ export const authOptions: NextAuthOptions = {
             id: "1",
             nombres: "Brayan",
             apellidos: "Parify",
-            foto: "https://avatars.githubusercontent.com/u/72213815?v=4",
+            foto: "https://mighty.tools/mockmind-api/content/human/5.jpg",
             rol: "admin",
             email: "brayan@gmail.com",
           };

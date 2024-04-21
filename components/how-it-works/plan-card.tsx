@@ -39,15 +39,12 @@ export default function PlanCard({
         <CardDescription
           className={`flex items-baseline ${m1PlusCode.className}`}
         >
-          <span className="text-4xl text-black font-bold">{cardPlanPrice}</span>{" "}
-          /{cardPlanExchange}
+          <span className="text-4xl  font-bold">{cardPlanPrice}</span> /
+          {cardPlanExchange}
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <Button
-          variant="outline"
-          className=" w-full rounded-full uppercase  border-none font-navaMono"
-        >
+        <Button className=" w-full rounded-full uppercase  border-none font-navaMono">
           Print parts
         </Button>
       </CardContent>

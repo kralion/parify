@@ -21,7 +21,13 @@ export default function FooterCard({
     <Card className="hover:bg-zinc-100 group cursor-pointer duration-200">
       <CardHeader>
         <div className="flex items-center gap-2">
-          <Image src={cardImageSrc} width={50} height={50} alt="cardImageSrc" />
+          <Image
+            src={cardImageSrc}
+            className="dark:invert"
+            width={50}
+            height={50}
+            alt="cardImageSrc"
+          />
           <div className="">
             <CardTitle className="flex gap-1">
               {cardTitle}
