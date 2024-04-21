@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
+
 import React from "react";
 import { useTheme } from "next-themes";
 export default function UserInfo() {
@@ -23,14 +24,14 @@ export default function UserInfo() {
       <DropdownMenuTrigger asChild>
         <div className="flex items-center gap-3 group cursor-pointer hover:opacity-80 duration-200">
           <Image
-            src={session?.data?.user.foto || ""}
+            src={session?.data?.user.foto || session?.data?.user.image || ""}
             alt="User"
             width={40}
             height={40}
             className="rounded-full "
           />
           <span className="text-slate-900 dark:text-slate-50 group-hover:underline duration-200">
-            {session?.data?.user.nombres}
+            {session?.data?.user.nombres || session?.data?.user.name}
           </span>
         </div>
       </DropdownMenuTrigger>

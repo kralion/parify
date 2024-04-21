@@ -10,6 +10,7 @@ const nextConfig = {
       "icons8.com",
       "s3-symbol-logo.tradingview.com",
       "mighty.tools",
+      "lh3.googleusercontent.com",
     ],
   },
 };
